@@ -20,7 +20,7 @@ namespace Otopark_Otomasyon_Sistemi
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void Ekran_Yetkileri_Load(object sender, EventArgs e)
@@ -59,7 +59,8 @@ namespace Otopark_Otomasyon_Sistemi
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-                Kullanıcı_Girişi.baglanti.Open();
+            //listBox1.SelectionMode = SelectionMode.MultiSimple;
+            Kullanıcı_Girişi.baglanti.Open();
                 SqlCommand komut1 = new SqlCommand("Select * from ekran_yetkisi where Oyetki='" + listBox1.SelectedItem + "'", Kullanıcı_Girişi.baglanti);
                 SqlDataReader okuyucu = komut1.ExecuteReader();
                 while (okuyucu.Read())

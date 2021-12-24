@@ -95,11 +95,11 @@ namespace Otopark_Otomasyon_Sistemi
                 {
                     Kullanıcı_Girişi.baglanti.Close();
                     Kullanıcı_Girişi.baglanti.Open();
-                    SqlCommand komut2 = new SqlCommand("CREATE TABLE kullanici_girisi (Okullanici_adi varchar(100), Osifre varchar(200), Osorgu varchar(200),PRIMARY KEY(Okullanici_adi))", Kullanıcı_Girişi.baglanti);
+                    SqlCommand komut2 = new SqlCommand("CREATE TABLE kullanici_girisi (Okullanici_adi varchar(100), Osifre varchar(200), Osorgu varchar(200),Odurum varchar(100),Oyenileme varchar(100),Ohata tinyint,PRIMARY KEY(Okullanici_adi))", Kullanıcı_Girişi.baglanti);
                     komut2.ExecuteNonQuery();
                     Kullanıcı_Girişi.baglanti.Close();
                     Kullanıcı_Girişi.baglanti.Open();
-                    SqlCommand komut34 = new SqlCommand("INSERT INTO kullanici_girisi (Okullanici_adi, Osifre, Osorgu)VALUES('yigit','5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5','d38a9c3ea00e94dc6ce4bd7d8476ca43fc624ae74abbc4d1f45a71ec7ab18e51')", Kullanıcı_Girişi.baglanti);
+                    SqlCommand komut34 = new SqlCommand("INSERT INTO kullanici_girisi (Okullanici_adi, Osifre, Osorgu,Odurum,Oyenileme,Ohata)VALUES('yigit','5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5','d38a9c3ea00e94dc6ce4bd7d8476ca43fc624ae74abbc4d1f45a71ec7ab18e51','1','0',0)", Kullanıcı_Girişi.baglanti);
                     komut34.ExecuteNonQuery();
                     Kullanıcı_Girişi.baglanti.Close();
                 }
@@ -577,12 +577,11 @@ namespace Otopark_Otomasyon_Sistemi
                     checkBox16.Checked = false;
                 }
             }
-
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
     }
 }

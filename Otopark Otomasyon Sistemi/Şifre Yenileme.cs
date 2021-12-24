@@ -23,19 +23,21 @@ namespace Otopark_Otomasyon_Sistemi
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
             if (textBox1.Text.Trim() != "" && textBox2.Text.Trim() != "")
             {
-
                 if (textBox1.Text.Trim().ToString() == textBox2.Text.Trim().ToString())
                 {
                     Kullanıcı_Girişi.baglanti.Open();
                     SqlCommand komut2 = new SqlCommand("update kullanici_girisi set Osifre='" + Şifreleme.Hashing(textBox1.Text.Trim().ToString()) + "' where Okullanici_adi='" + Şifremi_Unuttum.namekontrol.ToString() + "'", Kullanıcı_Girişi.baglanti);
                     komut2.ExecuteNonQuery();
                     Kullanıcı_Girişi.baglanti.Close();
+                    Kullanıcı_Girişi.baglanti.Open();
+                    SqlCommand komut3 = new SqlCommand("update kullanici_girisi set Oyenileme='0' where Okullanici_adi='" + Kullanıcı_Girişi.kullanıcı.ToString() + "'", Kullanıcı_Girişi.baglanti);
+                    komut3.ExecuteNonQuery();
+                    Kullanıcı_Girişi.baglanti.Close();
                     MessageBox.Show("Şifreniz başarılı bir şekilde değiştirildi.", "Başarılı İşlem");
                     Şifremi_Unuttum.namekontrol = "";
-                    this.Hide();
+                    this.Close();
                 }
                 else
                 {
@@ -52,8 +54,16 @@ namespace Otopark_Otomasyon_Sistemi
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Şifremi_Unuttum.namekontrol = "";
+        }
+
+        private void pictureBox2_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                pictureBox2_Click(sender, e);
+            }
         }
     }
 }

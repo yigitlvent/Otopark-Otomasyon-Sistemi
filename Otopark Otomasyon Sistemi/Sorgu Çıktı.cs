@@ -20,7 +20,7 @@ namespace Otopark_Otomasyon_Sistemi
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
         private static int a;
         private string sorgu;
@@ -53,19 +53,15 @@ namespace Otopark_Otomasyon_Sistemi
             Kullanıcı_Girişi.baglanti.Close();
             if (a==4||a==3)
             {
-                sorgu = "Select Oad from sorgu where Oyetki=1 or Oyetki=2 or Oyetki=3";
+                sorgu = "Select Oad from sorgu";
             }
             else if (a==2)
             {
                 sorgu = "Select Oad from sorgu where Oyetki=1 or Oyetki=2";
             }
-            else if (a==1)
-            {
-                sorgu = "Select Oad from sorgu where Oyetki=1";
-            }
             else
             {
-                sorgu= "Select Oad from sorgu where Oyetki=1 and Oyetki='"+a+"'";
+                sorgu = "Select Oad from sorgu where Oyetki='" + a + "'";
             }
 
             Kullanıcı_Girişi.baglanti.Open();

@@ -90,7 +90,7 @@ namespace Otopark_Otomasyon_Sistemi
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)

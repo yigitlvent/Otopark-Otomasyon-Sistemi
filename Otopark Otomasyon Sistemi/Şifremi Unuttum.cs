@@ -75,7 +75,15 @@ namespace Otopark_Otomasyon_Sistemi
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
+        }
+
+        private void pictureBox2_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                pictureBox2_Click(sender, e);
+            }
         }
     }
 }

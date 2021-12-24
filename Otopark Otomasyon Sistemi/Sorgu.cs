@@ -93,7 +93,7 @@ namespace Otopark_Otomasyon_Sistemi
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -129,6 +129,9 @@ namespace Otopark_Otomasyon_Sistemi
             }
         }
 
-
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //listBox1.SelectionMode = SelectionMode.MultiSimple;
+        }
     }
 }

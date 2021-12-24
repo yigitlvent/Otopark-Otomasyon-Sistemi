@@ -121,5 +121,13 @@ namespace Otopark_Otomasyon_Sistemi
             textBox7.Text = "";
             textBox6.Text = "";
         }
+
+        private void pictureBox2_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                pictureBox2_Click_1(sender, e);
+            }
+        }
     }
 }

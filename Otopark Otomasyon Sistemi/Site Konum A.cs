@@ -23,12 +23,12 @@ namespace Otopark_Otomasyon_Sistemi
         {
             Site_Konum_B kn = new Site_Konum_B();
             kn.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void Site_Konum_A_Load(object sender, EventArgs e)

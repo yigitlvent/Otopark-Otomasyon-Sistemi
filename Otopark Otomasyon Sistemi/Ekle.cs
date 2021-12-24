@@ -172,7 +172,7 @@ namespace Otopark_Otomasyon_Sistemi
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

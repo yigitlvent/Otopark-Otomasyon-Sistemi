@@ -42,26 +42,29 @@ namespace Otopark_Otomasyon_Sistemi
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox1.Location = new System.Drawing.Point(65, 73);
+            this.textBox1.Location = new System.Drawing.Point(87, 90);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(101, 20);
+            this.textBox1.Size = new System.Drawing.Size(133, 22);
             this.textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox2.Location = new System.Drawing.Point(65, 127);
+            this.textBox2.Location = new System.Drawing.Point(87, 156);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(101, 20);
+            this.textBox2.Size = new System.Drawing.Size(133, 22);
             this.textBox2.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(62, 55);
+            this.label1.Location = new System.Drawing.Point(83, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 15);
+            this.label1.Size = new System.Drawing.Size(70, 18);
             this.label1.TabIndex = 7;
             this.label1.Text = "Yeni Şifre";
             // 
@@ -69,9 +72,10 @@ namespace Otopark_Otomasyon_Sistemi
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(64, 109);
+            this.label2.Location = new System.Drawing.Point(85, 134);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 15);
+            this.label2.Size = new System.Drawing.Size(122, 18);
             this.label2.TabIndex = 8;
             this.label2.Text = "Yeni Şifre (tekrar)";
             // 
@@ -80,21 +84,24 @@ namespace Otopark_Otomasyon_Sistemi
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Otopark_Otomasyon_Sistemi.Properties.Resources.kilit;
-            this.pictureBox2.Location = new System.Drawing.Point(189, 173);
+            this.pictureBox2.Location = new System.Drawing.Point(252, 213);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.Size = new System.Drawing.Size(53, 49);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.pictureBox2_PreviewKeyDown);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Otopark_Otomasyon_Sistemi.Properties.Resources.Çıkış;
-            this.pictureBox1.Location = new System.Drawing.Point(209, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(279, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox1.Size = new System.Drawing.Size(29, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
@@ -102,10 +109,10 @@ namespace Otopark_Otomasyon_Sistemi
             // 
             // Şifre_Yenileme
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(241, 225);
+            this.ClientSize = new System.Drawing.Size(321, 277);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
@@ -113,6 +120,7 @@ namespace Otopark_Otomasyon_Sistemi
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Şifre_Yenileme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Şifre_Yenileme";

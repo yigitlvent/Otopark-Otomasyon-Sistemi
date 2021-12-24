@@ -110,7 +110,7 @@ namespace Otopark_Otomasyon_Sistemi
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
     }

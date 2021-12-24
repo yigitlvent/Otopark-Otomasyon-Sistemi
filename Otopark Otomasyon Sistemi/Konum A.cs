@@ -103,14 +103,14 @@ namespace Otopark_Otomasyon_Sistemi
 
         private void pictureBox11_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             Konum_B kn = new Konum_B();
             kn.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }
